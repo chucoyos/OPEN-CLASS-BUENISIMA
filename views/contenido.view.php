@@ -12,7 +12,8 @@
       <h3 class="card-header">Contactos registrados</h3>
       <div class="card-block">
         <?php foreach ($resultset as $fila): ?>
-          <div class="card">
+
+          <div class="card" style="margin-bottom: 10px;">
             <div class="card-header">
               <?php echo $fila['nombre'] . " " . $fila['apellidos']; ?>
             </div>
@@ -21,10 +22,14 @@
               <p class="card-text">Email: <?php echo $fila['email']; ?></p>
             </div>
           </div>
+
         <?php endforeach; ?>
       </div>
       <div class="card-footer">
-        <a href="cerrar.php" class="btn btn-danger btn-block">Cerrar sesión</a>
+        <div class="btn_toolbar-justify-content-between">
+          <a href="captura.php" class="btn btn-primary btn-block">Registrar Contactos</a>
+          <a href="cerrar.php" class="btn btn-secondary btn-block">Cerrar Sesión</a>
+        </div>
       </div>
     </div>
   </body>
